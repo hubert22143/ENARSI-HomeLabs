@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="720" viewBox="0 0 820 720">
+  <defs>
+    <style>
+      .bg-rip { fill: #eef6e4; }
+      .bg-ospf { fill: #f6eadc; }
+      .link { stroke: #222; stroke-width: 4; stroke-linecap: round; }
+      .router { fill: #317fa5; stroke: #1e5572; stroke-width: 3; }
+      .router-hi { fill: #6bb2d2; opacity: 0.45; }
+      .router-label { font: 700 24px Arial, sans-serif; fill: white; text-anchor: middle; dominant-baseline: middle; }
+      .net { font: 21px Arial, sans-serif; fill: #111; }
+      .small { font: 18px Arial, sans-serif; fill: #111; }
+      .iface { font: 18px Arial, sans-serif; fill: #e51c23; }
+      .area { font: 24px Arial, sans-serif; fill: #111; }
+      .protocol { font: 24px Arial, sans-serif; fill: #111; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="565" class="bg-rip"/>
+  <rect x="0" y="565" width="820" height="155" class="bg-ospf"/>
+  <line x1="0" y1="565" x2="820" y2="565" stroke="#222" stroke-width="2"/>
+
+  <text x="720" y="30" class="protocol">RIP</text>
+  <text x="360" y="690" class="area">OSPF Area 0</text>
+
+  <!-- Links -->
+  <line x1="410" y1="135" x2="410" y2="355" class="link"/>
+  <line x1="370" y1="395" x2="165" y2="595" class="link"/>
+  <line x1="450" y1="395" x2="655" y2="595" class="link"/>
+  <line x1="165" y1="625" x2="655" y2="625" class="link"/>
+  <line x1="410" y1="70" x2="410" y2="105" class="link"/>
+
+  <!-- Routers -->
+  <g>
+    <circle cx="410" cy="135" r="54" class="router"/>
+    <ellipse cx="410" cy="112" rx="42" ry="17" class="router-hi"/>
+    <text x="410" y="137" class="router-label">R1</text>
+  </g>
+  <g>
+    <circle cx="410" cy="395" r="54" class="router"/>
+    <ellipse cx="410" cy="372" rx="42" ry="17" class="router-hi"/>
+    <text x="410" y="397" class="router-label">R2</text>
+  </g>
+  <g>
+    <circle cx="120" cy="625" r="54" class="router"/>
+    <ellipse cx="120" cy="602" rx="42" ry="17" class="router-hi"/>
+    <text x="120" y="627" class="router-label">R3</text>
+  </g>
+  <g>
+    <circle cx="700" cy="625" r="54" class="router"/>
+    <ellipse cx="700" cy="602" rx="42" ry="17" class="router-hi"/>
+    <text x="700" y="627" class="router-label">R4</text>
+  </g>
+
+  <!-- Network labels -->
+  <text x="360" y="42" class="net">1.1.1.0 /24</text>
+  <text x="332" y="260" class="net" transform="rotate(-90 332 260)">192.168.12.0/24</text>
+  <text x="160" y="520" class="net" transform="rotate(-45 160 520)">192.168.23.0/24</text>
+  <text x="555" y="425" class="net" transform="rotate(45 555 425)">192.168.24.0/24</text>
+  <text x="322" y="615" class="net">192.168.34.0/24</text>
+
+  <!-- IP suffixes -->
+  <text x="428" y="218" class="small">.1</text>
+  <text x="428" y="335" class="small">.2</text>
+  <text x="315" y="430" class="small">.2</text>
+  <text x="205" y="585" class="small">.3</text>
+  <text x="505" y="430" class="small">.2</text>
+  <text x="615" y="585" class="small">.4</text>
+  <text x="165" y="655" class="small">.3</text>
+  <text x="645" y="655" class="small">.4</text>
+
+  <!-- Interface labels -->
+  <text x="432" y="235" class="iface" transform="rotate(-90 432 235)">Fa0/0</text>
+  <text x="432" y="327" class="iface" transform="rotate(-90 432 327)">Fa1/0</text>
+  <text x="254" y="500" class="iface" transform="rotate(-45 254 500)">Fa0/0</text>
+  <text x="515" y="500" class="iface" transform="rotate(45 515 500)">Fa0/1</text>
+  <text x="170" y="602" class="iface">Fa0/1</text>
+  <text x="585" y="602" class="iface">Fa0/1</text>
+</svg>
